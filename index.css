@@ -1,0 +1,159 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fbfbfb;
+  margin: 0;
+  /* font-size: 20px; */
+}
+
+table.gridtable {
+  font-size: 10px;
+  color: #333;
+  border-width: 1px;
+  border-color: #666;
+  border-collapse: collapse;
+}
+
+table.gridtable th {
+  padding: 8px;
+}
+table.gridtable td {
+  padding: 8px;
+}
+
+.Records {
+  margin: 50px auto;
+  padding: 5px 20px;
+  background-color: white;
+  max-width: 1150px;
+}
+
+.navbar {
+  color: #fff;
+  /* background-color: #40a1e2; */
+  background: rgb(64, 161, 226);
+  background: linear-gradient(90deg, rgba(64, 161, 226, 1) 0%, rgba(0, 222, 174, 1) 55%);
+  padding: 3px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.navbar__buttons {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  margin: 5px 0;
+}
+
+.navbar__buttons img {
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
+.navbar__playpause {
+  height: auto;
+  display: block;
+  text-align: center;
+  margin: 5px 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar__settings {
+  height: auto;
+  display: block;
+  text-align: center;
+  margin: 5px 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar__title {
+  font-size: 20px;
+  margin: 18px 0;
+  font-weight: bold;
+}
+
+.group {
+  display: flex;
+  flex-flow: nowrap row;
+  position: relative;
+  padding: 0;
+}
+
+.graphs-section {
+  margin: 0;
+  /* padding: 5px; */
+  display: block;
+  width: 50%;
+  background-color: #fff;
+}
+
+.info-section {
+  position: relative;
+  /* padding: 5px; */
+  margin: 0;
+  width: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.info-section__records {
+  overflow: scroll;
+  min-height: 200px;
+  max-height: 560px;
+  position: relative;
+  width: 100%;
+}
+
+.nav-section {
+  padding: 0;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  overflow: hidden;
+}
+
+#overlay__body {
+  position: absolute;
+  padding: 10px 20px;
+  max-height: 500px;
+  min-height: 350px;
+  height: 80%;
+  min-width: 600px;
+  max-width: 80%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  color: black;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+#overlay__settings {
+  height: auto;
+  flex-basis: 450px;
+}
+
+#ports {
+  width: auto;
+  overflow: auto;
+}

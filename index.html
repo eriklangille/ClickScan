@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Click Scan</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="overlay" >
+    <div id="overlay__body">
+      <h1 class="navbar__title">Settings</h1>
+      <div id="overlay__settings">
+        <div id="ports"></div>
+        <div>
+          <p>Serial Number</p>
+          <input type="text" id="settings__serialnumber" placeholder="Enter Serial ID of Arduino" value="" />
+        </div>
+        <div>
+          <p>Channel ID</p>
+          <input type="text" id="settings__channelid" value="" placeholder="Enter Clicker Channel" />
+        </div>
+      </div>
+      <div class="overlay__buttons">
+        <button id="BtnSaveSettings" type="button" class="" onclick="saveSBtnPressed()">
+          Save
+        </button>
+        <button id="BtnCloseSettings" type="button" class="" onclick="HideOverlay()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>  
+  
+  <div class="navbar" id="navbar">
+    <h1 class="navbar__title">Click Scan</h1>
+    <div class="navbar__buttons">
+      <div class="navbar__settings" onclick="ShowOverlay()">
+        <img src="assets/settings-24px.svg" alt="Settings"/>
+      </div>
+      <div class="navbar__playpause" id="navbar__playpause" onclick="pauseBtnPressed()">
+        <img src="assets/pause_circle_outline-24px.svg" id="navbar__pause" alt="Pause Button"/>
+        <img src="assets/play_circle_outline-24px.svg" id="navbar__play" alt="Play Button" style="display: none;" />
+      </div>
+    </div>
+  </div>
+    <!-- We are using Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, Electron <span id="electron-version"></span>, and Serialport <span id="serialport-version"></span> -->
+
+    <div id="error"></div>
+
+    <div class="Records">
+      <div class = "nav-section">
+        <h2 id="question-number" >Question</h2>
+        <button id="BtnPrevQ" type="button" class="nav-section__btn" onclick="prevQBtnPressed()">
+          Prev Question
+        </button>
+        <button id="BtnNextQ" type="button" class="nav-section__btn" onclick="nextQBtnPressed()">
+          Next Question
+        </button>
+        <button id="BtnNewQ" type="button" class="nav-section__btn" onclick="newQBtnPressed()">
+          New Question
+        </button>
+      </div>
+      <div class="group">
+        <div class="graphs-section">
+          <h3 class="text-center">Answer Distribution</h3>
+          <hr/>
+          <canvas id="answer-graph"></canvas>
+          <canvas id="time-graph"></canvas>
+          <br/>
+          Debugging: 
+          <button id="BtnClr" type="button" class="graphs-section__btn" onclick="clrBtnPressed()">
+            Clear Count
+          </button>
+          <button id="BtnNewRecord" type="button" class="graphs-section__btn" onclick="newRecordBtnPressed()">
+            New Random Record
+          </button>
+          <button id="BtnNewQ" type="button" class="graphs-section__btn" onclick="changeBtnPressed()">
+            Graph Check
+          </button>
+          <button id="BtnDelQ" type="button" class="graphs-section__btn" onclick="deleteBtnPressed()">
+            Delete Question
+          </button>
+        </div>
+        <div class="info-section">
+          <h3>Correct Answer</h3>
+          <form>
+            <input id="radio_A" type="radio" name="correct_answer" value="A" onclick="caBtnPressed('A')">A</input>
+            <input id="radio_B" type="radio" name="correct_answer" value="B" onclick="caBtnPressed('B')">B</input>
+            <input id="radio_C" type="radio" name="correct_answer" value="C" onclick="caBtnPressed('C')">C</input>
+            <input id="radio_D" type="radio" name="correct_answer" value="D" onclick="caBtnPressed('D')">D</input>
+            <input id="radio_E" type="radio" name="correct_answer" value="E" onclick="caBtnPressed('E')">E</input>
+          </form>
+          <p id="record-tally"></p>
+          <div class="info-section__records"><ul id="recordList"></ul></div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+<script src="./index.js"></script>
+
+</html>

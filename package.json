@@ -1,0 +1,30 @@
+{
+    "name": "iclicker-scan",
+    "version": "0.0.1",
+    "description": "An Electron application for user with iSkipper with node serialport",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "install": "electron-rebuild"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:johnny-five-io/electron-serialport.git"
+    },
+    "keywords": [
+        "Electron",
+        "iSkipper"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^5.0.5",
+        "electron-rebuild": "^1.8.5"
+    },
+    "dependencies": {
+        "chart.js": "^2.8.0",
+        "data-table": "^2.0.0",
+        "electron-store": "^5.0.0",
+        "serialport": "^7.1.5"
+    }
+}
