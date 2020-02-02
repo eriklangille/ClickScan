@@ -1,6 +1,6 @@
 {
-    "name": "iclicker-scan",
-    "version": "0.0.1",
+    "name": "clickscan",
+    "version": "1.0.0",
     "description": "An Electron application for user with iSkipper with node serialport",
     "main": "main.js",
     "scripts": {
@@ -13,7 +13,8 @@
     },
     "keywords": [
         "Electron",
-        "iSkipper"
+        "iSkipper",
+        "ClickScan"
     ],
     "author": "GitHub",
     "license": "CC0-1.0",

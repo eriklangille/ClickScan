@@ -1,4 +1,4 @@
-
+// Modified version of the same_answer example for iSkipper for the purpose of interfacing with ClickScan. Upload this file to your Arduino to ues ClickScan.
 #include "iClickerEmulator.h"
 #include <RingBufCPP.h>
 #include <string.h>
